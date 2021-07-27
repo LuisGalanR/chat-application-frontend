@@ -6,11 +6,15 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ChatComponent } from './containers/chat/chat.component';
+import { UsernameComponent } from './components/username/username.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ChatComponent,
+    UsernameComponent
   ],
   imports: [
     BrowserModule,
