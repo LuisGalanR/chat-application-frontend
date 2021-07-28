@@ -4,12 +4,12 @@
     <div class="chatbox">
         <div class="chatbox__userlist">
             <h2>User List</h2>
-            <div class="chatbox__user--active" *ngFor="let user from userList">
+            <div class="chatbox__user--active" *ngFor="let user of userList">
                 <p>{{user}}</p>
             </div>
         </div>
         <div class="messages_list">
-            <div class="chatbox__messages" *ngFor="let msg from messageList" [ngClass]="{mine: msg.mine}">
+            <div class="chatbox__messages" *ngFor="let msg of messageList" [ngClass]="{mine: msg.mine}">
                 <div class="user-message">
                     <div class="message-box">
                         <p class="name">{{msg.userName}}</p>

@@ -23,8 +23,8 @@ export class ChatComponent {
       this.userList = userList;
     })
 
-    this.socket.on("message-broadcast", (data: {message:string, userName:string}) => {
-      if(data){
+    this.socket.on('message-broadcast', (data: {message: string, userName: string}) => {
+      if (data) {
         this.messageList.push({message: data.message, userName: data.userName, mine: false});
       }
     });
@@ -34,5 +34,6 @@ export class ChatComponent {
     this.socket.emit("message", this.message);
     this.messageList.push({message: this.message, userName: this.userName, mine: true});
     this.message = "";
+    console.log(this.messageList);
   }
 }
